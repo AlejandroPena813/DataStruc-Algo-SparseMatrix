@@ -1,0 +1,12 @@
+CC=g++
+CFLAGS= -c -Wall -std=c++11
+
+all: sparseMatrix
+
+sparseMatrix: sparseMatrix.o
+	$(CC) sparseMatrix.o -o sparseMatrix
+
+sparseMatrix.o: sparseMatrix.cpp
+	$(CC) $(CFLAGS) sparseMatrix.cpp
+clean:
+	rm -rf *.o sparseMatrix
